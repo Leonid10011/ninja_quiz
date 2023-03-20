@@ -1,6 +1,6 @@
 const correctAnswers = ["B", "B", "B", "B"];
-
 const form = document.querySelector(".quiz-form");
+const anwserSpan = document.querySelector(".result");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -15,6 +15,7 @@ form.addEventListener("submit", e => {
             }
     });
 
-    console.log(score);
-    
+    anwserSpan.children[0].children[0].children[0].textContent=`${score}%`;
+    anwserSpan.classList.remove("d-none");
+
 });
