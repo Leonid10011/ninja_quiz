@@ -15,6 +15,8 @@ form.addEventListener("submit", e => {
             }
     });
 
+    // show result
+    scrollTo(0,0);
     anwserSpan.children[0].children[0].children[0].textContent=`${score}%`;
     anwserSpan.classList.remove("d-none");
 
